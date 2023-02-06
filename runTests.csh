@@ -1,14 +1,21 @@
-## These commands should run without error
+# This script runs a test set through retroicorLauren.  It creates a subdirectory, testDir, if it does not already exist.  Within this directory, it writes the
+# output, for each run of retroicorLauren, to a subdirectory reflecting the name of the input dataset.  The SliBase file is compared with the known good sliBase
+# file for that dataset.  It does that for every dataset that is expected to run without error.  The results of this analysis are written to the file
+# testDir/fileConsistencyRegression.txt
 
 # Create file similarity regression dirctory if it does not already exist
 set testDirectoryName='testDir'
 echo 'Test directory name: ' $testDirectoryName
 mkdir -p $testDirectoryName
 
-# Set up file similarity regression testing
+# Set up file similarity regression testing for all files
 set fileConsistencyRegressionFile = "testDir/fileConsistencyRegression.txt"
 echo "File Consistency Regression" >$fileConsistencyRegressionFile
 echo "---------------------------" >>$fileConsistencyRegressionFile
+
+## These commands should run without error
+
+# Set up file similarity regression test for this test set
 set outDir=testDir/test000c
 set prefix=test000
 set outPutFileName=$outDir/$prefix.slibase.1D
