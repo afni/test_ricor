@@ -22,9 +22,9 @@ python ~/retroicor/retroicorTaylor.py                                        \
     -volume_tr                      2.2                                      \
     -freq                           400                                      \
     -do_fix_nan                                                              \
-    -num_time_pts                   17                                       \
+    -num_time_pts                   16                                       \
     -slice_pattern                  alt+z                                    \
-    -extra_fix_list                 5000                                     \
+    -remove_val_list                5000                                     \
     -out_dir                        $outDir                                  \
     -prefix                         $prefix
 
@@ -242,7 +242,7 @@ python ~/retroicor/retroicorTaylor.py                                        \
     -do_fix_nan                                                              \
     -num_time_pts                   72                                       \
     -slice_pattern                  alt+z                                    \
-    -extra_fix_list                 5000                                     \
+    -remove_val_list                5000                                     \
     -out_dir                        $outDir                                  \
     -prefix                         $prefix
 

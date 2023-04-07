@@ -15,7 +15,7 @@ set fileConsistencyRegressionFile=testDir/fileConsistencyRegression.txt
 rm -rf $outDir  # Remove directory which will be replaced
 
 # Run ricor program
-python ~/retroicor/retroicorTaylor.py -card_file physiopy/test000c -prefix $prefix -num_slices 33 -volume_tr 2.2 -freq 400    -num_time_pts 17   -do_fix_nan -slice_pattern alt+z  -extra_fix_list 5000 -out_dir $outDir
+python ~/retroicor/retroicorTaylor.py -card_file physiopy/test000c -prefix $prefix -num_slices 33 -volume_tr 2.2 -freq 400    -num_time_pts 16 -do_fix_nan -slice_pattern alt+z  -remove_val_list 5000 -out_dir $outDir
 
 # Compare output SliBase file with known good file
 echo "csh testSlibaseOutput.csh " $outPutFileName $prefix ".slibase.1D " $fileConsistencyRegressionFile
